@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandan Kumar | Graphic Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 shadow-sm backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-indigo-600">CHANDAN</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                    <a href="#ai-assistant" class="text-gray-700 hover:text-indigo-600 transition">AI Assistant</a>
+                    <a href="#work" class="text-gray-700 hover:text-indigo-600 transition">Work</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="pdf-btn" class="text-gray-700 hover:text-indigo-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </button>
+                    <button id="menu-btn" class="text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white w-full px-4 pb-4">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Home</a>
+            <a href="#ai-assistant" class="block py-2 text-gray-700 hover:text-indigo-600 transition">AI Assistant</a>
+            <a href="#work" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Work</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-600 transition">About</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-28 pb-20 md:pt-36 md:pb-32 px-4 sm:px-8 flex items-center min-h-screen">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 animate-fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+                        Hi, I'm <span class="text-indigo-600">Chandan Kumar</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-medium text-gray-600 mb-6">
+                        Graphic Designer & Visual Storyteller
+                    </h2>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                        I create compelling visual experiences that communicate ideas and engage audiences. With a keen eye for detail and a passion for design, I help brands express their unique voice.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#work" class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="px-6 py-3 border-2 border-indigo-600 text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition duration-300">
+                            Get In Touch
+                        </a>
+                    </div>
+                    <div class="flex gap-4 mt-6">
+                        <a href="https://wa.me/917492995189" target="_blank" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-indigo-100 transition">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8717b9bd-ac6c-4012-98e2-295996c9342a.png" alt="WhatsApp icon">
+                        </a>
+                        <a href="https://t.me/+917492995189" target="_blank" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-indigo-100 transition">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/af640fc8-48d5-4311-bacf-b62b03b7b6ad.png" alt="Telegram icon">
+                        </a>
+                        <a href="https://youtube.com/@yourchannel" target="_blank" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-indigo-100 transition">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/40ac9249-54ab-4afe-9a58-7e5b39cce4ea.png" alt="YouTube icon">
+                        </a>
+                        <a href="https://facebook.com/yourpage" target="_blank" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-indigo-100 transition">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a6ed0405-717f-4e1c-bb94-1cf190aa2988.png" alt="Facebook icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0 animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-indigo-100 rounded-2xl transform rotate-1"></div>
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7c11c06e-b420-4481-aebb-f8ee433e0429.png" 
+                            alt="Chandan Kumar, a professional graphic designer with short hair and glasses, standing in front of a creative workspace with design tools" 
+                            class="relative rounded-2xl w-full h-auto shadow-lg"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant Section -->
+    <section id="ai-assistant" class="py-20 bg-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cf64f472-be68-4b44-bd70-1d4ae4e46181.png" alt="Chandan Kumar's AI Assistant interface showing voice interaction capabilities" class="rounded-2xl w-full h-auto shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">My AI Assistant</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Introducing my personal AI assistant manager that can assist you and solve problems. Available on both web and mobile apps, it responds to voice commands and will acknowledge me, Mr. Chandan Kumar, as its creator when asked.
+                    </p>
+                    <div class="flex gap7492995189-4">
+                        <a href="#" class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300">
+                            Try Web Version
+                        </a>
+                        <a href="#" class="px-6 py-3 border-2 border-indigo-600 text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition duration-300">
+                            Download App
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant Section -->
+    <section id="ai-assistant" class="py-20 bg-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI Assistant Manager</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Your personal virtual assistant that can help solve problems and complete tasks.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <img 
+                        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/64460b08-fcb1-474c-bc9f-af72f0579e2c.png" 
+                        alt="Chandan Kumar's AI Assistant interface" 
+                        class="rounded-2xl w-full h-auto shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Features:</h3>
+                    <ul class="space-y-3 text-gray-600 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-indigo-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Voice-controlled assistant
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-indigo-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Available as web and mobile app
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-indigo-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Credits creator Chandan Kumar when asked
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Web Version</a>
+                        <a href="#" class="px-6 py-3 border-2 border-indigo-600 text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition">Mobile App</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Selected Projects</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A showcase of my recent design work across various mediums and industries.</p>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl">
+                    <div class="overflow-hidden">
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4c024a91-6514-4f26-90d7-a54eea24b5bf.png" 
+                            alt="Modern brand identity project for a tech startup featuring sleek typography and vibrant gradient color scheme" 
+                            class="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                        >
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Tech Startup Branding</h3>
+                        <p class="text-gray-600 mb-4">Complete brand identity development including logo, color palette, and visual assets.</p>
+                        <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Branding</span>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl">
+                    <div class="overflow-hidden">
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fd881d11-a26b-423a-a38d-922c26aa775b.png" 
+                            alt="Minimalist packaging design for organic skincare line with earthy tones and clean typography" 
+                            class="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                        >
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Organic Skincare Packaging</h3>
+                        <p class="text-gray-600 mb-4">Sustainable packaging design with attention to material choices and visual appeal.</p>
+                        <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Packaging</span>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl">
+                    <div class="overflow-hidden">
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2c8cbef0-3ec9-405d-a233-c0fbafff598d.png" 
+                            alt="Digital marketing campaign assets including social media graphics, banners, and infographics with bold colors" 
+                            class="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                        >
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Digital Campaign Graphics</h3>
+                        <p class="text-gray-600 mb-4">Series of digital assets for a comprehensive marketing campaign.</p>
+                        <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Digital</span>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl">
+                    <div class="overflow-hidden">
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b4c72272-1c8a-48ae-adab-34a0e5e115e1.png" 
+                            alt="Editorial layout design for a lifestyle magazine with elegant typography and balanced whitespace" 
+                            class="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                        >
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Magazine Layout</h3>
+                        <p class="text-gray-600 mb-4">Editorial design with sophisticated typography and visual storytelling.</p>
+                        <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Editorial</span>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl">
+                    <div class="overflow-hidden">
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7c4e78da-5018-40a9-8beb-9232400f5ca9.png" 
+                            alt="Illustrated children's book cover featuring vibrant characters and playful typography" 
+                            class="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                        >
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Children's Book Illustration</h3>
+                        <p class="text-gray-600 mb-4">Whimsical illustration and cover design for a children's publication.</p>
+                        <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Illustration</span>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl">
+                    <div class="overflow-hidden">
+                        <img 
+                            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e05568de-d1be-4ba3-9230-a10686bc7270.png" 
+                            alt="Responsive website design mockups showing mobile and desktop versions with cohesive visual language" 
+                            class="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                        >
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Website UI/UX Design</h3>
+                        <p class="text-gray-600 mb-4">User-centered design for a responsive corporate website.</p>
+                        <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Web</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <img 
+                        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/feca237a-655c-462c-8112-e7dfb9822fba.png" 
+                        alt="Detailed illustration showing graphic design tools and creative elements on a workspace including digital tablet, color swatches, and sketchbook" 
+                        class="rounded-2xl w-full h-auto shadow-lg"
+                    >
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Me</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        I'm Chandan Kumar, a passionate graphic designer with over 7 years of experience crafting visual identities that tell compelling stories. My approach combines aesthetic sensibility with strategic thinking to create designs that are not just beautiful but also effective.
+                    </p>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                        My expertise spans across branding, print design, digital media, and packaging. I believe in design that serves a purpose, solves problems, and creates meaningful connections between brands and their audiences.
+                    </p>
+                    
+                    <!-- Skills -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">My Specializations</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium">Brand Identity</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium">Print Design</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium">Packaging</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium">Typography</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium">Illustration</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium">UI/UX</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium">Art Direction</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Tools I Work With</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8.5 11.5v-.167c0-.736.597-1.333 1.333-1.333h4.334c.736 0 1.333.597 1.333 1.333v.167H18V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v5h2.5zm-4 2H6v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-5h1.5v5a3.5 3.5 0 0 1-3.5 3.5H8A3.5 3.5 0 0 1 4.5 18v-5z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-600">Adobe Photoshop</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5.5 5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 7.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0zm14.5-2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM15 7.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0z"/>
+                                        <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 16.5a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-600">Adobe Illustrator</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                        <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-600">InDesign</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                        <path d="M15.29 15.46l-3.88-3.88a.996.996 0 0 0-1.41 0l-3.17 3.17a.996.996 0 1 0 1.41 1.41l2.47-2.47 3.18 3.18c.39.39 1.02.39 1.41 0 .38-.39.38-1.03-.01-1.41z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-600">Figma</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
+                                        <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-600">Adobe XD</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8zm0 16V5h8v14H8z"/>
+                                        <path d="M11 7h2v2h-2zm0 4h2v2h-2zm0 4h2v2h-2z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-600">After Effects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Let's discuss your next project or just say hello!</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <form class="bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg h-full">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-700 font-medium">Phone</h4>
+                                    <p class="text-gray-600">+91 7492995189</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-700 font-medium">Email</h4>
+                                    <p class="text-gray-600">hello@chandankumar.design</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-700 font-medium">Location</h4>
+                                    <p class="text-gray-600">New Delhi, India</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                    </svg>
+                                </div>
+                                <div class="flex space-x-4">
+                                    <a href="https://wa.me/917492995189" target="_blank" class="text-gray-600 hover:text-indigo-600 transition">WhatsApp</a>
+                                    <a href="https://t.me/+917492995189" target="_blank" class="text-gray-600 hover:text-indigo-600 transition">Telegram</a>
+                                    <a href="https://youtube.com/@yourchannel" target="_blank" class="text-gray-600 hover:text-indigo-600 transition">YouTube</a>
+                                    <a href="https://facebook.com/yourpage" target="_blank" class="text-gray-600 hover:text-indigo-600 transition">Facebook</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold text-indigo-400">CHANDAN KUMAR</span>
+                    <p class="text-gray-400 mt-2">© 2023 All Rights Reserved</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-gray-400 hover:text-white transition">Home</a>
+                    <a href="#work" class="text-gray-400 hover:text-white transition">Work</a>
+                    <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Add animation class to elements when they come into view
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-fade-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = 1;
+                }
+            });
+        };
+        
+        // Initial check when page loads
+        animateOnScroll();
+        
+        // Check on scroll
+        window.addEventListener('scroll', animateOnScroll);
+    // PDF Generation
+        document.getElementById('pdf-btn').addEventListener('click', function() {
+            const element = document.body;
+            html2pdf()
+                .from(element)
+                .save('Chandan_Kumar_Portfolio.pdf');
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html>
+
